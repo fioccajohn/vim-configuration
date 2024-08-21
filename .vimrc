@@ -118,6 +118,9 @@ set softtabstop=4   " Number of spaces that a <Tab> counts for while editing
 " Fountain file type
 au BufRead,BufNewFile *.fountain setlocal filetype=fountain 
 
+" SQL File Type
+autocmd FileType sql setlocal expandtab shiftwidth=2 softtabstop=2
+
 " HTML tab fix
 au BufRead,BufNewFile *.html setlocal tabstop=2
 
@@ -127,5 +130,8 @@ nnoremap <Leader>s :norm 1z=<CR>
 nnoremap <Leader>y :%y+<CR>
 nnoremap <Leader>d :%d<CR>
 nnoremap <Leader>p :norm "*p<CR>
+nnoremap <Leader>t :r!date<CR>
+nnoremap <Leader>h :noh<CR>
+vnoremap <Leader>ap <Esc>`<i(<Esc>`>a)<Esc>
 
 " John's custom functions
